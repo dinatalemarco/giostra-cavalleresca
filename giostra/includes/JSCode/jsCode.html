@@ -1,0 +1,37 @@
+{literal}
+$().ready(function() {
+{/literal}
+
+{foreach from=$method item=x}
+{literal}
+$.validator.addMethod("{/literal}{$x[0]}{literal}", function(value_{/literal}{$x[0]}{literal}, element_{/literal}{$x[0]}{literal}) {
+    return this.optional(element_{/literal}{$x[0]}{literal}) || {/literal}{$x[1]}{literal}.test(value_{/literal}{$x[0]}{literal});
+}, '<span>Please enter a valid {/literal}{$x[0]}{literal}</span>');
+{/literal}
+{/foreach}
+
+
+{literal}            
+$("#{/literal}{$nameForm}{literal}").validate({
+    rules: {
+    {/literal}
+    {foreach from=$validate item=x}
+        {$x[0]}: {literal}{{/literal}{if $x[2]} {$x[0]}:true, required: {$x[1]}, maxlength: {$x[2]} {else} required: {$x[1]} {/if}{literal}},{/literal}
+    {/foreach}
+    {literal}    
+        },
+        highlight: function (input) {
+            $(input).parents('.form-line').addClass('error');
+        },
+        unhighlight: function (input) {
+            $(input).parents('.form-line').removeClass('error');
+        },
+        errorPlacement: function (error, element) {
+            $(element).parents('.form-group').append(error);
+        }
+    });
+
+});
+{/literal}
+
+

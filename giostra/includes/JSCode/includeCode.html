@@ -1,0 +1,7 @@
+<!-- Usiamo la variabile UuodenDynamicPath perchè questo file può essere chiamato da due posizioni distinte, dal lato di amministrazione e dal lato pubblico, a seconda della posizione in cui viene chiamato viene rilasciato l'url corretto per l'inclusione delle librerie -->
+
+<script src="{$UuodenDynamicPath}includes/JSCode/JqueryValidate/jquery.validate.js"></script>
+<script src="{$UuodenDynamicPath}includes/JSCode/JqueryValidate/localization/messages_it.min.js"></script>
+{literal}
+<script src="{/literal}{$UuodenDynamicPath}modules/{$modules}/view/{$template}/js/{$service}{literal}.js"></script>
+{/literal}

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Giostra</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-datetimepicker.min.css">
+
+    <link rel="stylesheet" type="text/css" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" type="text/css" href="css/aos.css">
+    <link rel="stylesheet" type="text/css" href="css/rangeslider.css">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+  </head>
+  <body>
+  
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+    <header class="site-navbar container py-0 " role="banner">
+
+      <!-- <div class="container"> -->
+        <div class="row align-items-center">
+          
+          <div class="col-6 col-xl-2">
+            <h1 class="mb-0 site-logo"><a href="#" class="linkHome text-white mb-0">Giostracavalleresca</a></h1>
+          </div>
+          <div class="col-12 col-md-10 d-none d-xl-block">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+
+              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="active"><a class="linkHome" href="#">Home</a></li>
+                <li class="has-children">
+
+                  <a href="#">About</a>
+                  <ul id="listOfBorghi" class="dropdown"></ul>
+
+                </li>
+                <li><a class="linkEventi" href="#">Events</a></li>
+
+                <li class="ml-xl-3 hiddenLogin">
+                  <a  class="linkLogin" href="#"><span class="border-left pl-xl-4"></span>Login</a>
+                </li>
+
+                <li class="hiddenLogin">
+                  <a href="#" class="linkRegister cta">
+                    <span class="bg-primary text-white rounded">Register</span>
+                  </a>
+                </li>
+
+                <li class="has-children showLogin" style="width: 200px;">
+                  <a class="boxUsername" href="#"></a>
+                  <ul class="dropdown">
+                    <li><a class="linkProfile" href="#">Profile</a></li>
+                    <li><a class="linkPanel" href="#">Panel</a></li>
+                    <li><a class="linkUsers" href="#">Users</a></li>
+                    <li><a class="linkPublish" href="#">Events</a></li>                    
+                    <li><a class="linkLogout" href="#">Logout</a></li>
+                  </ul>
+                </li>              
+
+              </ul>
+            </nav>
+          </div>
+
+
+          <div class="d-inline-block d-xl-none ml-auto py-3 col-6 text-right" style="position: relative; top: 3px;">
+            <a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a>
+          </div>
+
+        </div>
+      <!-- </div> -->
+      
+    </header>
+
+  
+    <!-- Aggiungo la classe inner-page-cover -->
+    <div class="home site-blocks-cover overlay hidden" style="background-image: url(images/hero_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+          <div class="col-md-12">
+            
+            
+            <div class="row justify-content-center mb-4">
+              <div class="col-md-8 text-center">
+                <h1 class="welcome" data-aos="fade-up">Welcome To Medioeval Sulmona</h1>
+                <p data-aos="fade-up" data-aos-delay="100">Giostra Cavalleresca di Sulmona </p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>  
+
+
+    <div class="generic-slider site-blocks-cover inner-page-cover overlay hidden" style="background-image: url(images/hero_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+    </div> 
+
+
+
+<!-- ######################## LOGIN ######################## --> 
+
+
+    <div class="login site-section bg-light hidden">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 mb-5"  data-aos="fade" >
+
+            <h2 class="mb-5 text-black">Log In</h2>
+
+              <div class="loginMessage alert alert-danger hidden" role="alert"></div>
+             
+              <div class="row form-group">
+                
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label> 
+                  <input type="email" id="email" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Password</label> 
+                  <input type="password" id="password" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-12">
+                  <p>No account yet? <a class="linkRegister" href="#">Register</a></p>
+                </div>
+              </div>
+
+            
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <a class="btn btn-primary py-2 px-4 text-white linkLoginSubmission" href="#">Login</a>
+                </div>
+              </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+<!-- ############################################################### -->
+  
+
+<!-- REGISTER-->
+
+ <div class="register site-section bg-light hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-12"  data-aos="fade">
+            <h2 class="mb-5 text-black">Register</h2>
+            <div class="registerMessage alert alert-danger col-md-6 hidden" role="alert"></div>
+          </div>
+          <div class="col-md-6 mb-5"  data-aos="fade">
+      
+              <div class="row form-group">
+                <div class="col-md-6">
+                  <label class="text-black" for="name">Name</label> 
+                  <input type="text" id="nameRegister" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-6">
+                  <label class="text-black" for="surname">Surname</label> 
+                  <input type="text" id="surnameRegister" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-8">
+                  <label class="text-black" for="email">Email</label> 
+                  <input type="email" id="emailRegister" class="form-control">
+                </div>
+              </div>
+
+          </div>
+
+
+          <div class="col-md-6 mb-5"  data-aos="fade">
+             
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Password</label> 
+                  <input type="password" id="passwordRegister" class="form-control">
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="text-black" for="subject">Re-type Password</label> 
+                  <input type="password" id="rePasswordRegister" class="form-control">
+                </div>
+              </div>
+              <p class="alertPassword hidden" style="color: #ffb6c1;"></p>
+              <div class="row form-group">
+                <div class="col-12">
+                  <p>Have an account? <a class="linkLogin" href="#">Log In</a></p>
+                </div>
+              </div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <a class="btn btn-primary py-2 px-4 text-white linkRegisterSubmission" href="#">Register</a>
+                </div>
+              </div>
+
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+<!-- ############################################################### -->   
+
+<!-- PROFILE-->
+
+<div class="profile col-md-12 mb-12 hidden"  data-aos="fade">
+    <div class="card text-center">
+      <div class="card-header"> 
+              <ul class="nav nav-tabs card-header-tabs pull-right"  id="myTab" role="tablist">
+                <li class="nav-item">
+                 <a class="nav-link active" id="home-tab" data-toggle="tab" href="#userifno" role="tab" aria-controls="home" aria-selected="true">User Information</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#passwordInfo" role="tab" aria-controls="profile" aria-selected="false">Password</a>
+                </li>
+ 
+              </ul>
+      </div>
+      <div class="card-body">
+          <div class="tab-content" id="myTabContent" style="text-align: left !important;">
+              <div class="tab-pane fade show active" id="userifno" role="tabpanel" aria-labelledby="home-tab">                 
+               <div class="site-section bg-light pull-left">
+                    <div class="container">
+                      <div class="row">
+                      <div class="col-md-12 mb-12"  data-aos="fade">
+                        <div class="alertSuccessEditProfile alert alert-success col-md-6 hidden" role="alert"></div>
+                        <div class="alertErrorEditProfile alert alert-danger col-md-6 hidden" role="alert"></div>
+                      </div>                       
+                        <div class="col-md-6 mb-5"  data-aos="fade">
+                    
+                            <div class="row form-group">
+                              <div class="col-md-6">
+                                <label class="text-black" for="name">Name</label> 
+                                <input type="text" id="nameEditProf" class="form-control">
+                              </div>
+                            </div>
+
+                            <div class="row form-group">
+                              <div class="col-md-6">
+                                <label class="text-black" for="surname">Surname</label> 
+                                <input type="text" id="surnameEditProf" class="form-control">
+                              </div>
+                            </div>
+
+                            <div class="row form-group">
+                              <div class="col-md-8">
+                                <label class="text-black" for="email">Email</label> 
+                                <input type="email" id="emailEditProf" class="form-control">
+                              </div>
+                            </div>
+
+                            <div class="row form-group">
+                              <div class="col-md-12">
+                                <a class="btn btn-primary py-2 px-4 text-white linkEditProfileSubmission" href="#">Edit</a>
+                              </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-6 mb-5"  data-aos="fade">
+                    
+                      
+                        <div class="alertRegistrationBorgo alert alert-success col-md-8 hidden" role="alert"></div>
+
+                            <div class="row form-group">
+                              <div class="col-md-8">
+                                <label class="text-black" for="email">Borgo / Sestiere</label> 
+                                <select id="linkBorghiList" class="selectpicker form-control"></select>
+                              </div>
+                            </div>
+                            <br><br><br><br><br><br>
+                            <hr>
+                            <div class="row form-group">
+                              <div class="col-md-12">
+                                <a class="linkRemoveAccount" style="color:red; float: right;" href="#">Remove Account</a>
+                              </div>
+                            </div>                            
+
+
+                        </div>
+
+                        
+                      </div>
+                    </div>
+               </div>
+
+
+              </div>
+              <div class="tab-pane fade" id="passwordInfo" role="tabpanel" aria-labelledby="profile-tab">
+
+
+              <div class="site-section bg-light pull-left">
+                    <div class="container">
+                      <div class="row">
+                      
+                      <div class="col-md-12 mb-12"  data-aos="fade">
+                        <div class="alertSuccessEditPassword alert alert-success col-md-6 hidden" role="alert"></div>
+                        <div class="alertErrorEditPassword alert alert-danger col-md-6 hidden" role="alert"></div>
+                      </div>                       
+                        <div class="col-md-6 mb-5"  data-aos="fade">
+
+                            <div class="row form-group">
+
+                              <div class="col-md-12">
+                                <label class="text-black" for="subject">Old Password</label> 
+                                <input type="password" id="editOldpassword" class="form-control">
+                              </div>
+                            </div>            
+                           
+                            <div class="row form-group">
+                              <div class="col-md-12">
+                                <label class="text-black" for="subject">Password</label> 
+                                <input type="password" id="editPassword" class="form-control">
+                              </div>
+                            </div>
+
+                            <div class="row form-group">
+                              <div class="col-md-12">
+                                <label class="text-black" for="subject">Re-type Password</label> 
+                                <input type="password" id="editRetypePassword" class="form-control">
+                              </div>
+                            </div>
+                            <p class="alertPassword hidden" style="color: #ffb6c1;"></p>
+
+
+                            <div class="row form-group">
+                              <div class="col-md-12">
+                                <a class="btn btn-primary py-2 px-4 text-white linkEditPasswordSubmission" href="#">Change</a>
+                              </div>
+                            </div>
+
+                        </div>
+
+                        
+                      </div>
+                    </div>
+               </div>
+
+
+              </div>
+
+          </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- ############################################################### -->  
+
+
+
+<!--###########################ABOUT################################-->
+
+    <div class="about site-section hidden">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-md-6"> 
+            <img style="float: left; margin: 15px; width: 150px;" id="stemma" src="" alt="Image" class="img-fluid rounded">                     
+            <h2 id="nomeBorgo" class="text-primary mb-3"></h2>
+            <p id="motto"></p>
+            <p id="descrizione" class="mb-4"></p>
+
+            <ul class="ul-check list-unstyled primary">
+              <li>Capitano : <b id="capitano"></b></li>
+              <li>Cavaliere : <b id="cavaliere"></b></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+
+            <h3 class="text-primary">Albo d'Oro</h3>
+            <div class="table-responsive">
+                <table style="font-size:12px;" class="table user-list">
+                    <thead>
+                        <th><span>Anno</span></th>
+                        <th><span>Autore</span></th>
+                        <th><span>Cavaliere</span></th>
+                    </thead>
+
+                    <tbody id="itemListPalii"></tbody>
+
+                </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--###############################################################################################--> 
+
+  <!--######################################## EVENTI ###############################################-->
+   <div class=" eventi site-section hidden">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 class="mb-5 text-black">Events</h2>
+
+            <div id="eventsList" class="row mb-3 align-items-stretch"></div>
+
+          </div>
+          
+
+        </div>
+      </div>
+    </div>
+
+
+  <!--###############################################################################################-->
+
+ 
+ 
+  <!--################################################################################################-->
+
+  <!-- PUBLISH -->
+
+  <div class="publish bg-light hidden">
+
+    <div class="card text-center">
+      <div class="card-header"> 
+              <ul class="nav nav-tabs card-header-tabs pull-right"  id="myTab" role="tablist">
+                <li class="nav-item">
+                 <a class="nav-link active" id="listeventbutton" data-toggle="tab" href="#listeventsb" role="tab" aria-controls="home" aria-selected="true">List Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="addeventbutton" data-toggle="tab" href="#addeventb" role="tab" aria-controls="profile" aria-selected="false">Add Events</a>
+                </li>
+ 
+              </ul>
+      </div>
+      <div class="card-body">
+          <div class="tab-content" id="myTabContent" style="text-align: left !important;">
+
+              <div class="tab-pane fade show active" id="listeventsb" role="tabpanel" aria-labelledby="home-tab">      
+                                     
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="main-box no-header clearfix">
+                          <div class="main-box-body clearfix">
+                            <div class="table-responsive">
+                                <br><h2>Events List</h2><br>
+                                         
+                                  <div class="alertSuccessRemoveEvent alert alert-success col-md-12 hidden" role="alert"></div>
+                                  <div class="alertErrorRemoveEvent alert alert-danger col-md-12 hidden" role="alert"></div>
+                                  <div class="col-lg-12" id="itemListEvent"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+              <div class="tab-pane fade" id="addeventb" role="tabpanel" aria-labelledby="profile-tab">
+
+                  <div class="container">
+                    <div class="row">
+
+                          <div class="alertSuccessAddEvent alert alert-success col-md-6 hidden" role="alert"></div>
+                          <div class="alertErrorAddEvent alert alert-danger col-md-6 hidden" role="alert"></div>
+
+
+                          <div class="col-md-8">
+
+                              <div class="row form-group">                
+                                <div class="col-md-12">
+                                  <label class="text-black">Title *</label> 
+                                  <input type="text" id="titleEvent" class="form-control">
+                                  <input type="text" id="idevent" class="hidden">
+                                </div>
+                              </div>
+
+                              <div class="row form-group">
+                                <div class="col-md-12">
+                                  <label class="text-black" for="message">Description *</label> 
+                                  <textarea name="message" id="descriptionEvent" cols="30" rows="10" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                                </div>
+                              </div>
+
+                          </div>
+
+
+                          <div class="col-md-4">
+
+
+                              <div class="row form-group">                
+                                <div class="col-md-12">
+                                  <label class="text-black" >Date *</label> 
+                                  <input type="text" id="dateEvent" readonly class="form_datetime form-control">
+                                </div>
+                              </div>
+
+
+                              <div class="row form-group">
+                                <div class="col-md-6">
+                                  <label class="text-black" for="subject">Maximum number of subscribers * </label> 
+                                  <input type="text" id="placesEvent" class="form-control">
+                                </div>
+                              </div>
+
+                              <div class="row form-group">
+                                <div class="col-md-6">
+                                  <label class="text-black" for="message">State *</label> 
+                                  <select id="stateEvent" class="selectpicker form-control">
+                                    <option value="0">Inactive</option>
+                                    <option value="1">Active</option>
+                                  </select>
+                                </div>
+                              </div>
+
+
+                              <div class="row form-group">
+                                <div class="col-md-12">
+                                  <a id="buttonEventAdd" class="btn btn-primary py-2 px-4 text-white linkAddEventSubmission" href="#">Pulish Event</a>
+                                  <a id="buttonEventEdit" class="btn btn-primary py-2 px-4 text-white linkEditEventSubmission hidden" href="#">Edit Event</a>                               
+                                </div>
+                                </div>                                
+                              </div>
+
+                          </div>
+
+                  
+                    </div>
+                  </div>
+                
+              </div>
+
+          </div>
+      </div>
+    </div>
+
+  </div>
+  <!--################################################################################################-->
+
+ <!--USERS-->
+<div class="users container bootstrap snippet hidden">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="main-box no-header clearfix">
+                <div class="main-box-body clearfix">
+                    <div class="table-responsive">
+                        <br><h2>Subscriber List</h2><br>
+                        <div class="activateAccountSuccess alert alert-success hidden" role="alert"></div>
+                        <div class="activateAccountError alert alert-danger hidden" role="alert"></div>
+                        <table class="table user-list">
+                            <thead>
+                                
+                                <th><span>Name</span></th>
+                                <th><span>Surname</span></th>
+                                <th><span>Email</span></th>
+                                <th><span>Registration Date</span></th>
+                                <th class="text-center"><span>State Account</span></th>
+                                <th class="text-center"><span>Role</span></th>
+                                
+                                
+                            </thead>
+                            <tbody id="itemListUsers"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!--################################################################################################-->
+
+  
+
+   
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.js"></script>
+
+
+  <!-- ######### Import Controller ############## -->
+  <script type="text/javascript" src="controller/cookie.js"></script>
+  <script type="text/javascript" src="controller/struct.js"></script>
+  <script type="text/javascript" src="controller/requests.js"></script>
+  <script type="text/javascript" src="controller/form.js"></script>
+  <script type="text/javascript" src="controller/building.js"></script>
+  <script type="text/javascript" src="controller/refreshPage.js"></script>  
+  <script type="text/javascript" src="controller/link.js"></script>
+  <!-- ########################################### -->
+
+
+
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+  <script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+  <script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>  
+  <script type="text/javascript" src="js/aos.js"></script>
+  <script type="text/javascript" src="js/rangeslider.min.js"></script>
+
+
+  <script type="text/javascript" src="js/main.js"></script>
+
+    
+  </body>
+</html>
